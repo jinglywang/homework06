@@ -1,0 +1,40 @@
+﻿@model BirthdayCard.Models.BirthCardInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>CardSent</title>
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<style>
+		.btn a {
+			color: white;
+			text-decoration: none;
+			height: 300px;
+		}
+
+		.header {
+			background-color: #000000;
+			color: white;
+		}
+
+		body {
+			background-color: #f1f1f1;
+		}
+	</style>
+</head>
+<body>
+	<div class="header"><h2>Birthday Card Generator</h2></div>
+	<div>
+		<h1>Birthday Card Sent</h1>
+		<p>From: @Model.From</p>
+		<p>To: @Model.To</p>
+		<p>Message: @Model.Message</p>
+	</div>
+</body>
+</html>

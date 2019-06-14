@@ -1,0 +1,47 @@
+﻿
+@model BirthdayCard.Models.BirthCardInfo
+
+@{
+	Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Birthday Card Generator</title>
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<style>
+		.btn a {
+			color: white;
+			text-decoration: none;
+			height: 300px;
+		}
+
+		.header {
+			background-color: #000000;
+			color: white;
+		}
+
+		body {
+			background-color: #f1f1f1;
+		}
+	</style>
+</head>
+<body>
+	<div class="header"><h2>Birthday Card Generator</h2></div>
+	<div>
+		<h1>Send a Birthday Card</h1>
+		@using (Html.BeginForm())
+		{
+			@Html.ValidationSummary()
+			<p>From: @Html.TextBoxFor(t => t.From)</p>
+			<p>To: @Html.TextBoxFor(t => t.To)</p>
+			<p>Message: @Html.TextBoxFor(t => t.Message)</p>
+			<input class="btn btn-success" type="submit" value="Send Card" />
+		}
+	</div>
+</body>
+</html>
